@@ -1,0 +1,701 @@
+/* https://coolors.co/4281a4-48a9a6-e4dfda-9b8360-c1666b */
+
+/* Supratitle definitions*/
+
+.clickbar-content-with-supratitle {
+display: none;
+padding: 15px;
+background: #fff;
+border-width: 1px;
+border-style: solid;
+border-color: #ccc;
+border-radius: 0px 0px 0px 0px;
+margin: 0;
+}
+
+.clickbar-supratitle {
+position: relative;
+display: block;
+width: 100%;
+color: #000;
+background: #c3c3c3;
+border-radius: 5px 5px 0px 0px;
+text-align: center;
+margin: 0px 0px 0px 0px;
+text-decoration: none;
+-webkit-touch-callout: none;
+-webkit-user-select: none;
+-khtml-user-select: none;
+-moz-user-select: none;
+-ms-user-select: none;
+user-select: none;
+}
+
+.clickbar-supratitle span {
+display: block;
+color: #000;
+padding: 10px 40px 10px 40px;
+}
+
+/* Supratitle definitions*/
+
+
+/* Text Color definitions */
+.clickbar-title span {
+
+color: #000;
+
+}
+/* Text Color definitions */
+
+/* Color definitions */
+
+
+.green {
+border-color: #00A14B;
+background-color: #00A14B;
+}
+
+.light_green {
+border-color: #8BC4A4;
+background-color: #8BC4A4;
+}
+
+.clickbar-closed {
+background-color: #D4B483;
+border-color: #D4B483;
+color: #000;
+}
+
+
+/* Clickbar Border */
+.clickbar-open, .clickbar-container, .clickbar-content, .tooltip-content{
+border-color: #ABDCD0;
+}
+
+
+.clickbar-closed.green{
+background-color: #D4B483;
+}
+
+/* Clickbar title when closed */
+.clickbar-title, .clickbar-supratitle{
+border-color: #B7C1E1;
+background-color: #B7C1E1;
+}
+
+.clickbar-supratitle{
+ display: none;
+}
+
+
+
+/* Clickbar Hover */
+ul.menu-main li:hover, .pbccycle-link:hover, .cycle-clickbar:hover, .clickbar-title:hover, .clickbar-supratitle:hover, .darker-ochre-background:hover{
+border-color: #CBD2EA;
+background-color: #CBD2EA;
+}
+
+
+/* Form Field Border */
+.selectable{
+background-color: #fff;
+border-color: #ACB8DD;
+color: #000;
+}
+
+
+/* Form Field Border */
+.label{
+border-color: #ACB8DD;
+
+}
+
+/* Form Field Title */
+.label-text, .label-message {
+border-color: #ACB8DD;
+background-color: #ACB8DD;
+color: #000;
+}
+
+/*upper bar, top of page*/
+#decorative-bar, #header, #footer {
+background-color: #264b65;
+}
+
+/*lower bar, top of page*/
+#info-bar, #admin-bar {
+background-color: #E4DFDA;
+}
+
+ul.menu-main ul li {
+border-color: #333;
+}
+
+
+/*Clickbar Title Top and Bottom Open*/
+.clickbar-active, .disabled, .tooltip-content{
+background-color: #ABDCD0;
+}
+
+.tooltip-content:before {
+position: absolute;
+display: block;
+content: ' ';
+bottom: -10px;
+right: 10px;
+width: 0;
+height: 0;
+border-top: 10px solid #ABDCD0; /* #8dbdd8 */
+border-left: 15px solid transparent;
+}
+
+.darker-ochre-border{
+border-color: #8e9ed1;
+}
+
+
+/*Clickbar containers one level up (main)*/
+.darker-ochre-background{
+background-color: #8e9ed1;
+}
+
+/*Clickbar containers one level up (main)*/
+.no-hover:hover{
+background-color: #8e9ed1;
+}
+
+
+.warning{
+background-color: #FCCB83;
+}
+
+
+/* Color definitions */
+
+
+
+/* breadcrumb */
+
+.breadcrumb-item {
+margin: 0px 6px 0px 0px;
+text-decoration: none;
+}
+
+.breadcrumb-item-home:before {
+content: "Home";
+margin-left: 6px;
+}
+
+.breadcrumb-item:after {
+content: "\00BB";
+margin-left: 6px;
+}
+
+
+.breadcrumb-item:last-child:after {
+content: "";
+margin-left: 0px;
+}
+/* end breadcrumb */
+
+
+.site-info  {
+cursor: pointer;
+}
+
+* {
+font-family: sans-serif;
+font-weight: 400;
+font-size: 15px;
+color: #333;
+-webkit-tap-highlight-color: rgba(0,0,0,0);
+}
+
+html, body {
+height: 100%;
+margin: 0;
+padding: 0;
+-webkit-text-size-adjust: 100%;
+-moz-text-size-adjust: 100%;
+-ms-text-size-adjust: 100%;
+}
+
+#wrapper {
+position: relative;
+display: block;
+width: 100%;
+min-height: 100%;
+margin: 0;
+padding: 0;
+background: #fff;
+}
+
+#content {
+position: relative;
+display: block;
+padding: 0px 0px 100px 0px;
+}
+
+#decorative-bar {
+position: relative;
+display: block;
+height: 15px;
+}
+
+#header {
+position: relative;
+display: block;	
+height: 80px;
+}
+
+#header .inner {
+height: 100px;
+}
+
+#header .ccicon {
+background-image: url('../images/ccicon02.png');
+background-repeat: no-repeat;
+
+position: relative;
+display: block;	
+padding-top: 10px;
+margin-top: 0px;
+margin-left: 280px;
+padding-left: 65px;
+height: 50px;
+}
+
+
+#header a.eclkc-logo {
+position: absolute;
+display: inline-block;
+width: 200px;
+height: 39px;
+background-color: #fff;
+border-radius: 5px;
+padding: 2px;
+background-image: url('../images/eclkc-site-logo.png');
+background-repeat: no-repeat;
+z-index: 100;
+}
+
+#header h1 {
+font-size: 20px;
+letter-spacing: 2px;
+color: #fff;
+text-transform: uppercase;
+margin-top: 0px;
+margin-bottom: 0px;
+}
+
+h1 {
+font-size: 24px;
+letter-spacing: 2px;
+}
+
+.trademark {
+display: inline-block;
+vertical-align: top;
+color: #fff;
+}
+
+.align-right {
+display: inline-block;
+float: right;
+
+margin: -30px 10px;
+
+}
+
+
+.data-display {
+display: inline-block;
+text-decoration: none;
+line-height: 20px;
+vertical-align: top;
+color: #333;
+background:transparent;
+border-width: 0px 0px 0px 0px;
+border-style: none;
+border-color: #ddd;
+border-radius: 5px 5px 0px 0px;
+padding: 20px 20px;
+margin: 0px 2px;
+}
+
+
+#info-bar {
+height: 50px;
+padding: 10px 0px 10px 0px;
+}
+
+.inner {
+position: relative;
+display: block;
+width: 940px;
+margin: 0 auto;
+}
+
+.site-description {
+color: #fff;
+}
+
+#info-bar-left {
+display: block;
+float: left;
+max-width: 0%;
+text-align: left;
+}
+
+#info-bar-right {
+display: block;
+float: right;
+max-width: 100%;
+text-align: right;
+}
+
+#welcome-text {
+display: block;
+padding: 0px 10px;
+}
+
+#admin-bar {
+padding: 0px 0px 10px 0px;
+}
+
+#admin-bar .inner {
+text-align: right;
+}
+
+
+
+
+/* menu main */
+
+ul.menu-main  {
+position: relative;
+display: block;
+float: right;
+padding: 0;
+margin: 5px 0px 0px 0px;
+list-style: none;
+list-style-position: inside;
+z-index: 10;
+}
+
+ul.menu-main li {
+display: block;
+float: left;
+padding: 0;
+line-height: 30px;
+}
+
+ul.menu-main li a {
+display: block;
+padding: 0px 10px;
+text-decoration: none;
+}
+
+
+
+
+ul.menu-main ul {
+visibility: hidden;
+position: absolute;
+display: block;
+background: #F0F0F0;
+z-index: 11;
+margin: 0;
+padding: 0;
+}
+
+ul.menu-main li:hover > ul {
+visibility: visible;
+}
+
+ul.menu-main ul li {
+position: relative;
+display: block;
+margin: 0;
+padding: 0;
+float: none;
+border-width: 0px 0px 1px 0px;
+border-style: solid;
+}
+
+ul.menu-main ul li a {
+display: block;
+line-height: 10px;
+padding: 20px 10px 20px 10px;
+}
+
+.responsive-menu {
+display: none;
+}
+
+/* menu registration */
+
+ul.menu-registration {
+position: relative;
+display: block;
+list-style: none;
+list-style-position: inside;
+padding: 0;
+margin: 10px 0px 0px 0px;
+}
+
+ul.menu-registration li {
+display: inline-block;
+padding: 0px;
+}
+
+ul.menu-registration li a {
+color: #03c;
+text-decoration: none;
+}
+
+ul.menu-registration li a:hover {
+text-decoration: underline;
+}
+
+ul.menu-registration .seporator {
+display: inline-block;
+padding: 0px 10px;
+}
+
+/* ADD / EDIT buttons */
+
+.admin-toggle {
+display: inline-block;
+visibility: hidden;
+cursor: pointer;
+
+}
+
+.admin-toggle-active {
+background: #333;
+color: #000;
+}
+
+.close-message {
+position: absolute;
+top:0px;
+right: 0px;
+width: 20px;
+height: 20px;
+border-radius: 10px;
+background: #fff;
+color: #333;
+margin: 10px;
+cursor: pointer;
+}
+
+/* footer */
+
+#footer {
+position: absolute;
+display: block;
+width: 100%;
+height: 60px;
+bottom: 0px;
+left: 0px;
+color: #FFF;
+text-align: center;
+font-size: 11px;
+padding: 20px 0px 0px 0px;
+line-height: 20px;
+}
+
+#footer .inner {
+color: #FFF;
+text-align: center;
+font-size: 11px;
+}
+
+#footer .copy {
+font-size: 10px;
+}
+
+#footer .footer_text {
+font-size: 10px;
+color: #fff
+}
+
+
+
+
+.welcome_wrapper {
+display: block;
+color: #fff;
+height:94px;
+
+}
+
+.welcome_image {
+display: block;
+color: #fff;
+    width: 120px;
+    float:left;
+
+}
+
+.welcome_text_wrapper {
+display: block;
+color: #fff;
+padding: 1% 0;
+
+}
+.welcome_text {
+display: block;
+text-align: center;
+padding: 1% 0;
+
+}
+
+
+/* Responsive Styles */
+
+/* Tablet Portrait size to standard 960 (devices and browsers) */	
+@media only screen and (max-width: 959px) {
+
+.inner {
+width: 95%;
+margin: 0 auto;
+}
+
+}
+
+
+/* Mobile Landscape Size to Tablet Portrait (devices and browsers) */
+@media only screen and (max-width: 767px) {
+
+.responsive-menu-icon {
+position: absolute;
+display: block;
+background-image: url('../images/menu.png');
+background-repeat: no-repeat;
+width: 76px;
+height: 76px;
+top: 0px;
+left: 0px;
+cursor: pointer;
+}
+
+.responsive-menu-ccicon {
+position: absolute;
+display: block;
+background-image: url('../images/ccicon02.png');
+background-repeat: no-repeat;
+width: 76px;
+height: 76px;
+top: 0px;
+left: 300px;
+cursor: pointer;
+}
+
+/* menu main */
+
+ul.menu-main  {
+display: none;
+}
+
+.site-info  {
+display: none;
+}
+
+.responsive-menu {
+position: absolute;
+display: block;
+background: #ABDCD0;
+width: 100%;
+height: 100%;
+left: -100%;
+z-index: 10;
+padding: 10px 0px;
+}
+
+.responsive-menu ul.menu-main  {
+display: block;
+float: none;
+}
+
+.responsive-menu ul.menu-main li {
+display: block;
+float: none;
+padding: 0;
+line-height: 30px;
+}
+
+.responsive-menu ul.menu-main li a {
+display: block;
+padding: 0px 10px;
+text-decoration: none;
+color: #000;
+}
+
+.responsive-menu  ul.menu-main li:hover {
+background: #DACEBF;
+}
+
+
+.responsive-menu ul.menu-main ul {
+position: relative;
+display: block;
+background: #F0F0F0;
+z-index: 11;
+margin: 0;
+padding: 0;
+}
+
+.responsive-menu ul.menu-main li:hover > ul {
+display: block;
+}
+
+.responsive-menu ul.menu-main ul li {
+position: relative;
+display: block;
+margin: 0;
+padding: 0;
+float: none;
+border: 0;
+}
+
+.responsive-menu ul.menu-main ul li a {
+display: none;
+line-height: 10px;
+padding: 20px 10px 20px 10px;
+}
+
+
+
+
+}
+
+/* Mobile Small */
+@media only screen and (max-width: 580px) {
+
+.inner {
+width: 95%;
+margin: 0 auto;
+}
+
+#header .logo-text {
+position: absolute;
+background-image: url('../images/ccicon02.png');
+background-repeat: no-repeat;
+height: 44px;
+width: 156px;
+margin: 40px 0px 0px 100px;
+}
+
+#header .header-title {
+display:none;
+}
+
+.clickbar-content {
+overflow: hidden;
+}
+
+}
+

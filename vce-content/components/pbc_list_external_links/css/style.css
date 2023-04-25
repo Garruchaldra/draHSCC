@@ -1,0 +1,9 @@
+#edit-step-tab {
+  width: 100%;
+}
+
+#edit-step-tab .delete-form {
+  position: absolute;
+  right: 10px;
+  top: 336px;
+}

@@ -1,0 +1,188 @@
+/* tabs */
+
+.pbccycle-tabs {
+display: block;
+height: 50px;
+padding: 0px 5px;
+margin: 10px 0px;
+border-width: 0px 0px 1px 0px;
+border-style: solid;
+border-color: #333;
+}
+
+.tab {
+display: inline-block;
+text-decoration: none;
+line-height: 49px;
+vertical-align: top;
+color: #666;
+background: #efefef;
+border-width: 1px 1px 0px 1px;
+border-style: solid;
+border-color: #ddd;
+border-radius: 5px 5px 0px 0px;
+padding: 0px 20px;
+margin: 0px 2px;
+}
+
+.tab:hover {
+background: #ddd;
+}
+
+
+.active-tab {
+color: #333;
+background: #fff;
+font-weight: bold;
+line-height: 50px;
+border-width: 1px 1px 0px 1px;
+border-style: solid;
+border-color: #333;
+border-radius: 5px 5px 0px 0px;
+}
+
+.active-tab:hover {
+background: #fff;
+}
+
+.pbccycle-name {
+text-decoration: none;
+font-size: 20px;
+}
+
+.pbccycles-name:hover {
+color: #999;
+}
+
+
+
+.pbccycle-link {
+display: block;
+/* padding: 10px; */
+text-decoration: none;
+margin: 10px 0px;
+border-width: 0px 0px 1px 0px;
+/* border-style: solid; */
+border-color: lightgray;
+}
+
+
+
+.pbccycle-link-complete {
+display: block;
+background: #cfcfcf;
+border-radius: 10px;
+/* padding: 10px; */
+text-decoration: none;
+margin: 10px 0px;
+border-width: 0px 0px 1px 0px;
+/* border-style: solid; */
+border-color: #333;
+}
+
+.pbccycle-link-text {
+display: block;
+/* padding: 10px; */
+text-decoration: none;
+margin: 10px 0px;
+}
+
+
+
+
+
+
+/* tool tips */
+
+.input-tooltip-icon {
+position: absolute;
+display: block;
+top: 9px;
+right: 9px;
+width: 18px;
+height: 18px;
+background: #fff;
+border-radius: 9px;
+margin: 0px;
+cursor: pointer;
+}
+
+.input-tooltip-icon:before {
+color: #a3a3a3;
+content: "\003f";
+font-size: 12px;
+font-weight: bold;
+}
+
+.input-tooltip-icon:hover {
+color: #666;
+}
+
+.input-tooltip-icon.within-tile {
+margin: 2px 5px 0px 0px;
+}
+
+.general-tooltip {
+position: absolute;
+display: none;
+bottom: 32px;
+right: -4px;
+width: 268px;
+background: #3c3;
+border-radius: 5px;
+padding: 10px;
+}
+
+.arrow-down {
+position: absolute;
+display: block;
+bottom: -10px;
+right: 18px;
+width: 0;
+height: 0;
+border-top: 10px solid #3c3;
+border-left: 15px solid transparent;
+}
+
+span.tooltip-text {
+color: #000;
+}
+
+
+
+
+
+.pagination {
+    display: block;
+    font-size: 14px;
+    min-height: 20px;
+    padding: 10px;
+    background: #e6eeee;
+    border-width: 0px 0px 1px 0px;
+    border-style: solid;
+    border-color: #999;
+    }
+    
+    .pagination-tracker {
+    display: inline-block;
+    padding: 0px 10px 0px 0px;
+    }
+    
+    input[type=text].pagination-input {
+    display: inline;
+    width: 35px;
+    height: 15px;
+    font-size: 16px;
+    padding: 5px;
+    margin: 0;
+    border: 0;
+    border-radius: 5px;
+    outline: none;
+    resize: none;
+    overflow: auto;
+    border-width: 1px;
+    border-style: solid;
+    border-color: #d3d3d3;
+    border-radius: 5px;
+    background: #fff;
+    }

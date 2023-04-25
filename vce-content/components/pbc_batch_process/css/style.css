@@ -1,0 +1,9 @@
+#edit-goal-tab {
+  width: 100%;
+}
+
+#edit-goal-tab .delete-form {
+  position: absolute;
+  right: 10px;
+  top: 253px;
+}

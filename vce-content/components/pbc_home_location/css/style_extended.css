@@ -1,0 +1,7 @@
+.instructions__content {
+  background: #e6eeee;
+}
+
+.instructions__content:after {
+  border-bottom-color: #e6eeee;
+}

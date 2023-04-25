@@ -1,0 +1,155 @@
+table.table-style {
+margin: 0px 0px 0px 0px;
+font-size: 8pt;
+width: 100%;
+text-align: left;
+border-collapse: collapse;
+}
+
+/* table.table-style thead tr th {
+/* padding: 5px; */
+/*} */
+
+table.table-style thead tr th .sort-icon {
+display: block;
+height: 20px;
+width: 100%;
+text-align: center;
+}
+
+table.table-style thead tr th .sort-icon:hover {
+cursor: pointer;
+}
+
+table.table-style thead tr th .sort-active.sort-asc:after {
+content: "\25b2";
+}
+
+table.table-style thead tr th .sort-active.sort-desc:after {
+content: "\25bc";
+}
+
+table.table-style thead tr th .sort-inactive:after {
+height: 20px;
+width: 100%;
+content: "\25e6";
+}
+
+table.table-style thead tr th .sort-inactive:hover:after {
+height: 20px;
+width: 100%;
+content: "\25cf";
+}
+
+table.table-style tbody td {
+color: #3d3d3d;
+padding: 10px 5px;
+/* background-color: #FFF; */
+vertical-align: top;
+border-width: 1px 1px 0px 0px;
+border-style: solid;
+border-color: #efefef;
+}
+
+.selections_div {
+    grid-column-start: 1;
+    grid-column-end: 3;
+    grid-row-start: 2;
+}
+
+#search-users ~ .table-style {
+    -ms-grid-row: 3;
+    grid-row: 3;
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 2;
+    grid-column: 1 / span 2;
+  }
+
+  #search-users ~ .pagination {
+    -ms-grid-row: 4;
+    grid-row: 4;
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 3;
+    -ms-grid-column-align: right;
+    grid-column: 1 / span 3;
+    justify-self: right;
+  }
+  
+  .inline-flex {
+      display: inline-flex;
+  }
+
+.pagination {
+display: block;
+float: right;
+font-size: 14px;
+min-height: 20px;
+padding-bottom: 10px;
+}
+
+.pagination-tracker {
+display: inline-block;
+padding: 0px 10px 0px 0px;
+}
+
+input[type=text].pagination-input {
+display: inline;
+width: 35px;
+height: 15px;
+font-size: 16px;
+padding: 5px;
+margin: 0;
+border: 0;
+border-radius: 5px;
+outline: none;
+resize: none;
+overflow: auto;
+border-width: 1px;
+border-style: solid;
+border-color: #d3d3d3;
+border-radius: 5px;
+background: #fff;
+}
+
+#notes-textarea {
+    border-width: 1px;
+border-style: solid;
+border-color: #090334;
+    overflow-y: scroll;
+    resize: none; /* Remove this if you want the user to resize the textarea */
+}
+
+.accordion-content {
+    position: relative
+}
+
+.processed_user {
+    background-color: rgb(185, 235, 180);
+    background: rgb(185, 235, 180);
+}
+
+.unprocessed_user {
+    background-color: rgb(243, 151, 151);
+    background: rgb(243, 151, 151);
+}
+
+.registering-new-org {
+    background-color: rgb(231, 104, 82) !important;
+    background: rgb(231, 104, 82)!important;
+}
+.org-has-been-registered {
+    background-color: rgb(185, 235, 180)  !important;
+    background: rgb(185, 235, 180) !important;
+}
+
+#process-selected-users {
+    display: none;
+}
+
+#main-inner {
+    width: 1500px;
+}
+
+.role-select {
+    width: 700px;
+}

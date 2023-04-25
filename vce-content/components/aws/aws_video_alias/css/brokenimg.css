@@ -1,0 +1,38 @@
+img {
+	font-family: 'Helvetica';
+	font-weight: 300;
+	line-height: 2;  
+	text-align: center;
+	
+	width: 200px;
+	height: auto;
+	display: block;
+	position: relative;
+}
+  
+img:before { 
+	content: " ";
+	display: block;
+  
+	position: absolute;
+	top: 0;
+	left: 0;
+	height: 100%;
+	width: 100%;
+	background-color: rgb(230, 230, 230);
+	border-radius: 0px;
+}
+  
+img:after { 
+	content: "Thumbnail is being generated";
+	display: block;
+	font-size: 12px;
+	font-style: normal;
+	color: rgb(100, 100, 100);
+	
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	text-align: center;
+}

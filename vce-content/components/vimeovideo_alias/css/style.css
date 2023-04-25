@@ -1,0 +1,42 @@
+.video-alias-container {
+margin: 0px 0px 20px 0px;
+}
+
+.video-thumbnail-border {
+position: relative;
+display: inline-block;
+padding: 5px 5px 3px 5px;
+}
+
+.video-thumbnail-border.video-selected {
+background-color: #eeb258;
+}
+
+.video-thumbnail {
+position: relative;
+display: inline-block;
+width: 282px;
+height: auto;
+cursor: pointer;
+}
+
+.video-thumbnail img {
+display: block;
+width: 100%;
+height: auto;
+}
+
+.video-thumbnail .video-title {
+position: absolute;
+display: none;
+top: 0;
+left: 0;
+width: 80%;
+padding: 10%;
+color: #fff;
+background-color:rgba(0, 0, 0, 0.5);
+}
+
+.video-thumbnail:hover .video-title {
+display: block;
+}

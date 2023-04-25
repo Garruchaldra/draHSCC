@@ -1,0 +1,24 @@
+table.table-style thead {
+  background: #e6eeee;
+}
+
+table.table-style thead tr th.current-sort {
+  background-color: #8dbdd8;
+}
+
+.sort-icon {
+  display: block;
+}
+
+table.table-style thead tr th {
+  font-size: 8pt;
+  padding: 5px;
+}
+
+table.table-style thead tr th .sort-inactive:after {
+  display: block;
+}
+
+table.table-style thead tr th .sort-inactive:hover:after {
+  display: block;
+}

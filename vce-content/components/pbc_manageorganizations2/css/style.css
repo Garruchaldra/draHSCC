@@ -1,0 +1,48 @@
+.instructions {
+padding: 10px;
+font-size: 15px;
+color: #333;
+}
+
+.wordwrap {
+  padding: 10px;
+  font-size: 15px;
+  color: #333;
+  word-wrap: anywhere;
+  }
+
+.accordion-title #edit-btn {
+  border-radius: 5px;
+  margin-left: 10px;
+  width: 60px;
+  height: 20px;
+}
+
+.accordion-title #edit-btn:hover {
+  background-color: white;
+}
+
+.accordion-title #edit-btn span {
+  color: #333;
+  display: inline-block;
+  padding: 5px 5px 5px 10px;
+  line-height: 10px;
+}
+
+.manage-orgs ~ .accordion-container > .accordion-heading {
+  width: 100%;
+}
+
+.manage-orgs ~ .accordion-container > .accordion-heading .accordion-title {
+  width: auto;
+}
+
+.delete-form {
+  position: relative;
+  top: -10px;
+}
+
+.add-org-form ~ .add-group-form {
+  display: none;
+}
+

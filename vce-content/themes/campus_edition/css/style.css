@@ -1,0 +1,419 @@
+* {
+font-family: sans-serif;
+font-weight: 400;
+font-size: 15px;
+color: #333;
+-webkit-tap-highlight-color: rgba(0,0,0,0);
+}
+
+html, body {
+height: 100%;
+margin: 0;
+padding: 0;
+-webkit-text-size-adjust: 100%;
+-moz-text-size-adjust: 100%;
+-ms-text-size-adjust: 100%;
+}
+
+#wrapper {
+position: relative;
+display: block;
+width: 100%;
+min-height: 100%;
+margin: 0;
+padding: 0;
+background: #fff;
+}
+
+#content {
+position: relative;
+display: block;
+padding: 0px 0px 100px 0px;
+}
+
+#header {
+position: relative;
+display: block;	
+background-image: url('../images/uw_background.png');
+background-repeat: repeat;
+height: 143px;
+}
+
+
+#header .logo {
+position: absolute;
+background-image: url('../images/uw_logo.png');
+background-repeat: no-repeat;
+height: 85px;
+width: 82px;
+}
+
+#header .logo-text {
+position: absolute;
+background-image: url('../images/uw_logo_text.png');
+background-repeat: no-repeat;
+height: 24px;
+width: 308px;
+margin: 45px 0px 0px 100px;
+}
+
+#header .header-title {
+position: absolute;
+font-size: 26px;
+letter-spacing: 2px;
+color: #FFF;
+text-transform: uppercase;
+text-align: center;
+padding: 90px 0px 0px 100px;
+}
+
+
+.responsive-menu-icon {
+display: none;
+}
+
+h1 {
+font-size: 24px;
+letter-spacing: 2px;
+}
+
+#info-bar {
+height: 50px;
+padding: 10px 0px 10px 0px;
+background-color: #EEE8DA;
+}
+
+.inner {
+width: 940px;
+margin: 0 auto;
+}
+
+#info-bar-left {
+display: block;
+float: left;
+max-width: 45%;
+text-align: left;
+}
+
+#info-bar-right {
+display: block;
+float: right;
+max-width: 45%;
+text-align: right;
+}
+
+#welcome-text {
+display: block;
+padding: 0px 10px;
+}
+
+#admin-bar {
+padding: 0px 0px 10px 0px;
+background-color: #EEE8DA;
+}
+
+#admin-bar .inner {
+text-align: right;
+}
+
+/* menu main */
+
+ul.menu-main  {
+position: relative;
+display: block;
+float: right;
+padding: 0;
+margin: 5px 0px 0px 0px;
+list-style: none;
+list-style-position: inside;
+z-index: 10;
+}
+
+ul.menu-main li {
+display: block;
+float: left;
+padding: 0;
+line-height: 30px;
+}
+
+ul.menu-main li a {
+display: block;
+padding: 0px 10px;
+text-decoration: none;
+}
+
+ul.menu-main li:hover {
+background: #DACEBF;
+}
+
+
+ul.menu-main ul {
+visibility: hidden;
+position: absolute;
+display: block;
+background: #F0F0F0;
+z-index: 11;
+margin: 0;
+padding: 0;
+}
+
+ul.menu-main li:hover > ul {
+visibility: visible;
+}
+
+ul.menu-main ul li {
+position: relative;
+display: block;
+margin: 0;
+padding: 0;
+float: none;
+border-width: 0px 0px 1px 0px;
+border-style: solid;
+border-color: #333;
+}
+
+ul.menu-main ul li a {
+display: block;
+line-height: 10px;
+padding: 20px 10px 20px 10px;
+}
+
+.responsive-menu {
+display: none;
+}
+
+/* menu registration */
+
+ul.menu-registration {
+position: relative;
+display: block;
+list-style: none;
+list-style-position: inside;
+padding: 0;
+margin: 10px 0px 0px 0px;
+}
+
+ul.menu-registration li {
+display: inline-block;
+padding: 0px;
+}
+
+ul.menu-registration li a {
+color: #03c;
+text-decoration: none;
+}
+
+ul.menu-registration li a:hover {
+text-decoration: underline;
+}
+
+ul.menu-registration .seporator {
+display: inline-block;
+padding: 0px 10px;
+}
+
+/* ADD / EDIT buttons */
+
+.admin-toggle {
+display: inline-block;
+visibility: hidden;
+cursor: pointer;
+
+}
+
+.admin-toggle-active {
+background: #333;
+color: #fff;
+}
+
+.close-message {
+position: absolute;
+top:0px;
+right: 0px;
+width: 20px;
+height: 20px;
+border-radius: 10px;
+background: #fff;
+color: #333;
+margin: 10px;
+cursor: pointer;
+}
+
+/* breadcrumb */
+
+.breadcrumb-item {
+margin: 0px 6px 0px 0px;
+text-decoration: none;
+}
+
+.breadcrumb-item-home:before {
+content: "\2302";
+margin-left: 6px;
+}
+
+.breadcrumb-item:after {
+content: "\00BB";
+margin-left: 6px;
+}
+
+.breadcrumb-item:last-child:after {
+content: "";
+margin-left: 0px;
+}
+
+/* footer */
+
+#footer {
+position: absolute;
+display: block;
+width: 100%;
+height: 60px;
+bottom: 0px;
+left: 0px;
+color: #FFF;
+text-align: center;
+font-size: 11px;
+background-color: #eee8da;
+padding: 20px 0px 0px 0px;
+line-height: 20px;
+}
+
+#footer .inner {
+color: #FFF;
+text-align: center;
+font-size: 11px;
+}
+
+#footer .copy {
+font-size: 10px;
+}
+
+
+/* Responsive Styles */
+
+/* Tablet Portrait size to standard 960 (devices and browsers) */	
+@media only screen and (max-width: 959px) {
+
+.inner {
+width: 95%;
+margin: 0 auto;
+}
+
+}
+
+
+/* Mobile Landscape Size to Tablet Portrait (devices and browsers) */
+@media only screen and (max-width: 767px) {
+
+.responsive-menu-icon {
+position: absolute;
+display: block;
+background-image: url('../images/menu.png');
+background-repeat: no-repeat;
+width: 76px;
+height: 76px;
+top: 40px;
+right: 0px;
+cursor: pointer;
+}
+
+/* menu main */
+
+ul.menu-main  {
+display: none;
+}
+
+.responsive-menu {
+position: absolute;
+display: block;
+background: #d7a800;
+width: 100%;
+height: 100%;
+left: -100%;
+z-index: 10;
+padding: 10px 0px;
+}
+
+.responsive-menu ul.menu-main  {
+display: block;
+float: none;
+}
+
+.responsive-menu ul.menu-main li {
+display: block;
+float: none;
+padding: 0;
+line-height: 30px;
+}
+
+.responsive-menu ul.menu-main li a {
+display: block;
+padding: 0px 10px;
+text-decoration: none;
+color: #fff;
+}
+
+.responsive-menu  ul.menu-main li:hover {
+background: #DACEBF;
+}
+
+
+.responsive-menu ul.menu-main ul {
+position: relative;
+display: block;
+background: #F0F0F0;
+z-index: 11;
+margin: 0;
+padding: 0;
+}
+
+.responsive-menu ul.menu-main li:hover > ul {
+display: block;
+}
+
+.responsive-menu ul.menu-main ul li {
+position: relative;
+display: block;
+margin: 0;
+padding: 0;
+float: none;
+border: 0;
+}
+
+.responsive-menu ul.menu-main ul li a {
+display: none;
+line-height: 10px;
+padding: 20px 10px 20px 10px;
+}
+
+
+
+}
+
+/* Mobile Small */
+@media only screen and (max-width: 580px) {
+
+.inner {
+width: 95%;
+margin: 0 auto;
+}
+
+#header .logo-text {
+position: absolute;
+background-image: url('../images/uw_logo_text_alt.png');
+background-repeat: no-repeat;
+height: 44px;
+width: 156px;
+margin: 40px 0px 0px 100px;
+}
+
+#header .header-title {
+display:none;
+}
+
+.clickbar-content {
+overflow: hidden;
+}
+
+}
+

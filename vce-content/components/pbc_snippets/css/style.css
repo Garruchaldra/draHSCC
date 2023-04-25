@@ -1,0 +1,358 @@
+.title-bar__header {
+  font-family: 'Roboto', sans-serif;
+  font-size: 24px;
+  border-bottom-width: .5px;
+  border-bottom-style: solid;
+  -ms-grid-column: 2;
+  grid-column: 2;
+  display: inline-block;
+}
+
+.title-bar {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 60px 92%;
+  grid-template-columns: 60px auto;
+  -ms-grid-rows: auto auto auto auto;
+  grid-template-rows: auto auto auto auto;
+}
+
+.instructions__container {
+  position: absolute;
+  right: 0;
+  text-align: right;
+  width: 20%;
+}
+
+.instructions__label {
+  cursor: pointer;
+}
+
+.sidebar__content-box {
+  position: relative;
+  padding: 10px;
+  right: 0;
+  top: 63px;
+  z-index: 1;
+}
+
+.instructions__label-container {
+  z-index: 1;
+  position: absolute;
+  right: 0;
+  cursor: pointer;
+}
+
+/*Infoboxes*/
+.infobox__header-container {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 29px auto;
+  grid-template-columns: 29px auto;
+}
+
+.infobox__header-icon {
+  background-image: url(../images/help.svg);
+  background-repeat: no-repeat;
+  background-size: 26px;
+  height: 25px;
+  width: 25px;
+  display: inline-block;
+  -ms-grid-column: 1;
+  grid-column: 1;
+}
+
+.infobox__header {
+  position: relative;
+  top: -14px;
+  font-weight: bold;
+  font-size: 14px;
+  float: right;
+  color: #264B65;
+  -ms-grid-column: 2;
+  grid-column: 2;
+  margin-bottom: 0;
+}
+
+.infobox__title {
+  font-weight: bold;
+  text-align: center;
+  margin-top: 0;
+}
+
+.infobox__icon {
+  background-repeat: no-repeat;
+  background-size: 55px;
+  height: 55px;
+  width: 55px;
+  background-position-x: center;
+  margin: 0 auto;
+}
+
+.infobox__text {
+  font-size: 14px;
+}
+
+.infobox__pbc-link {
+  font-size: 14px;
+  text-decoration: underline;
+}
+
+
+/*Progress Arrows*/
+.progress-arrows__container {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 25% 25% 25% 25%;
+  grid-template-columns: 25% 25% 25% 25%;
+  -ms-grid-rows: 45px;
+  grid-template-rows: 45px;
+  margin-top: 10px;
+}
+
+.progress-arrows {
+  width: 24%;
+  height: 45px;
+  display: inline-block;
+  background-repeat: no-repeat;
+  background-size: 100% 45px;
+  -ms-grid-row: 1;
+  grid-row: 1;
+  padding-top: 13px;
+  opacity: .65;
+}
+
+@supports(display: grid) {
+  .progress-arrows {
+    width: 88%;
+    height: 100%;
+    padding-top: 0;
+  }
+}
+
+.progress-arrow-text:hover {
+  text-decoration: none;
+}
+
+.progress-arrows__one {
+  -ms-grid-column: 1;
+  grid-column: 1;
+  -ms-grid-row: 1;
+  grid-row: 1;
+  background-image: url(../images/arrow_left.svg);
+}
+
+.progress-arrows__two {
+  -ms-grid-column: 2;
+  grid-column: 2;
+  -ms-grid-row: 1;
+  grid-row: 1;
+  background-image: url(../images/arrow_middle.svg);
+}
+
+.progress-arrows__three {
+  -ms-grid-column: 3;
+  grid-column: 3;
+  -ms-grid-row: 1;
+  grid-row: 1;
+  background-image: url(../images/arrow_middle.svg);
+}
+
+.progress-arrows__four {
+  -ms-grid-column: 4;
+  grid-column: 4;
+  -ms-grid-row: 1;
+  grid-row: 1;
+  background-image: url(../images/arrow_right.svg);
+}
+
+.progress-arrow-text {
+  -ms-grid-row: 1;
+  grid-row: 1;
+  -ms-grid-column-align: center;
+  align-self: center;
+  -ms-grid-row-align: center;
+  justify-self: center;
+  z-index: 1;
+  text-align: center;
+  margin: 0;
+  color: black;
+}
+
+@supports (display:grid) {
+  .progress-arrow-text {
+    display: block;
+    top: 0;
+    padding: 5px 15px;
+    line-height: 34px;
+  }
+}
+
+.progress-arrows__active {
+  opacity: 1;
+}
+
+ .progress-arrow-text__active-link {
+  color: #264B65;
+  text-decoration: underline;
+  opacity: 1;
+}
+
+.progress-arrow-text__active-link:hover, .progress-arrow-text__active-link:focus {
+  opacity: .75;
+  text-decoration: underline;
+  outline: none;
+}
+
+
+/* Mobile Landscape Size to Tablet Portrait (devices and browsers) */
+@media only screen and (max-width: 767px) {
+  .progress-arrows {
+    background-size: 100% 55px;
+    padding-top: 19px;
+  }
+
+  @supports(display: grid) {
+    .progress-arrows {
+      width: 83%;
+    }
+  }
+
+  .progress-arrows__four {
+    padding-top: 14px;
+    text-indent: 23px;
+    vertical-align: middle;
+  }
+
+  @supports(display: grid) {
+    .progress-arrows__four {
+      padding-top: 18px;
+      text-indent: 0;
+      line-height: unset;
+    }
+  }
+
+  .progress-arrow-text {
+    line-height: 17px;
+  }
+
+  @supports(display: grid) {
+    .progress-arrow-text {
+      line-height: 12px;
+    }
+  }
+
+  .progress-arrows__container {
+    -ms-grid-rows: 55px;
+    grid-template-rows: 55px;
+  }
+
+  .instructions__label-container {
+    display: block;
+    content: "";
+    background-image: url("../images/help.svg");
+    background-repeat: no-repeat;
+    background-size: 30px;
+    height: 30px;
+    width: 30px;
+    position: absolute;
+    right: 10px;
+    top: 15px;
+  }
+    
+  .instructions__label {
+    display: none;
+  }
+    
+  .sidebar__content-box {
+    position: relative;
+    border-radius: .4em;
+    height: max-content;
+    width: 200px;
+    top: 63px;
+    padding: 10px;
+  }
+
+  .instructions__content {
+    border-bottom: 5px solid #7ECC6D;
+  }
+    
+  .instructions__content:after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 80%;
+    width: 0;
+    height: 0;
+    border: 20px solid transparent;
+    border-top: 0;
+    border-right: 0;
+    margin-left: -10px;
+    margin-top: -20px;
+    border-bottom-color: #E5F2E2;
+  }
+    
+  .instructions__title {
+    display: none;
+  }
+
+  .instructions__container {
+    width: auto;
+  }
+
+  /*internet explorer 11*/
+  _:-ms-fullscreen, :root .progress-arrows {
+    width: 82%; 
+  }
+
+}
+
+
+/* Mobile Small */
+@media only screen and (max-width: 580px) {
+  .progress-arrow-text {
+    font-size: 13px;
+  }
+
+  .progress-arrows {
+    width: 24%;
+  }
+
+  .progress-arrows__two, .progress-arrows__three {
+    padding-top: 14px;
+    text-indent: 23px;
+    vertical-align: middle;
+  }
+
+  @supports(display: grid) {
+    .progress-arrows__two, .progress-arrows__three {
+      padding-top: 18px;
+      text-indent: 0;
+      line-height: unset;
+    }
+
+    .progress-arrows {
+      width: 70%;
+    }
+  }
+
+    /*internet explorer 11*/
+    _:-ms-fullscreen, :root .progress-arrows {
+      width: 70%; 
+    }
+
+}
+
+  /*Internet Explorer specific styles*/
+@media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
+  .progress-arrows {
+    width: 90%;
+    height: none;
+  }
+
+  .progress-arrow-text {
+    display: block;
+    top: 0;
+    padding: 13px 15px;
+  }
+}

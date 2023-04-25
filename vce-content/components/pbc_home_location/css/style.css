@@ -1,0 +1,164 @@
+.hide {
+display: none;
+}
+
+.clear-style {
+all: unset;
+}
+
+/*View Cycles table*/
+.pbc-cycles__table-item {
+  width: 100%;
+  height: 100%;
+  padding: 15px 0;
+}
+
+.pbc-cycles__table-item > .pbccycle-link, .pbc-cycles__table-item > .pbccycle-link-complete {
+display: -ms-grid;
+display: grid;
+-ms-grid-columns: 1fr max-content;
+grid-template-columns: auto -webkit-max-content;
+grid-template-columns: auto max-content;
+-ms-grid-rows: auto auto auto auto auto auto;
+grid-template-rows: auto auto auto auto auto auto;
+grid-auto-flow: column;
+text-decoration: none;
+background: transparent;
+padding: 20px 0;
+border-color: lightgray;
+}
+
+.pbccycle-link-complete:hover {
+text-decoration: none;
+}
+
+.pbc-cycles__table-item > .pbccycle-link:focus, .pbccycle-link-complete:focus {
+  outline: none;
+}
+
+.pbc-cycles__cycle-name {
+-ms-grid-column: 1;
+grid-column-start: 1;
+-ms-grid-row: 1;
+grid-row-start: 1;
+padding-left: 10px;
+}
+
+.pbc-cycles__originator {
+-ms-grid-column: 1;
+grid-column-start: 1;
+-ms-grid-row: 2;
+grid-row-start: 2;
+padding-left: 10px;
+}
+
+.pbc-cycles__participants {
+-ms-grid-column: 1;
+grid-column-start: 1;
+-ms-grid-row: 3;
+grid-row-start: 3;
+padding-left: 10px;
+}
+
+.pbc-cycles__cycle-dates {
+-ms-grid-column: 1;
+grid-column-start: 1;
+-ms-grid-row: 4;
+grid-row-start: 4;
+align-self: end;
+padding-left: 10px;
+}
+
+.cycle-edit-link #edit-btn {
+  position: relative;
+  right: 10px;
+  top: -10px;
+}
+
+@supports(display: grid) {
+  .cycle-edit-link #edit-btn {
+    position: absolute;
+    top: 30px;
+    right: 10px;
+  }
+
+  .pbc-cycles__table-item {
+    padding: 0;
+    padding-right: 1px;
+  }
+}
+
+/*Internet Explorer*/
+@media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
+  .cycle-edit-link #edit-btn {
+    position: absolute;
+    top: 30px;
+    right: 10px;
+  }
+
+  .pbc-cycles__table-item {
+    padding: 0;
+  }
+}
+
+
+/*Add Cycles form*/
+#wrapper ~ .select2-container {
+  width: 80% !important;
+}
+
+#cycle_participants ~ .select2 .select2-selection {
+  border: none;
+  outline: initial;
+  background: transparent;
+}
+
+
+/*formatting for generate_cycle_info table items*/
+.progress-info-box__table-item {
+  display: block
+}
+
+.progress-info-box__link {
+  font-size: 13px;
+  margin-bottom: 10px;
+}
+
+.progress-info-box__completed-checkbox {
+  margin-top: 15px;
+}
+
+.progress-info-box__link .back-icon {
+  margin-left: 0;
+}
+
+.progress-info-box__table-item div, .progress-info-box__table-item button, .progress-info-box__table-item label {
+  font-size: 14px;
+}
+
+.progress-info-box__cycle-name {
+  margin-top: 5px;
+}
+
+
+/* Mobile Small */
+@media only screen and (max-width: 580px) {
+  .pbc-cycles__completed-checkbox {
+  -ms-grid-column: 2;
+  grid-column-start: 2;
+  -ms-grid-row: 4;
+  grid-row-start: 4;
+  }
+
+  .pbc-cycles__cycle-dates {
+  padding-top: 10px;
+  -ms-grid-column: 1;
+  grid-column-start: 1;
+  -ms-grid-row: 4;
+  grid-row-start: 4;
+  }
+
+  .progress-info-box__link > .back-icon {
+    margin: 0;
+  }
+}

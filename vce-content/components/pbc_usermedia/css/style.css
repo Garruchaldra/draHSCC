@@ -1,0 +1,104 @@
+.page-info {
+  margin: 20px 0;
+}
+
+#my-library_table-container {
+  border: .25px solid rgba(211, 211, 211, .5);
+}
+
+#my-library_table-container .tablesorter {
+  width: 100%;
+  table-layout: fixed;
+  background: transparent;
+}
+
+#my-library_table-container thead {
+  text-align: left;
+}
+
+#my-library_table-container table.tablesorter tbody td {
+  border-width: 1px 0px 0px 0px;
+  background: transparent;
+}
+
+.resources_comments_accordion_content .resource-library-btn, .resources_comments_accordion_content .my-library-btn {
+  margin-left: 20px;
+  height: 38px;
+  font-size: 15px;
+}
+
+.table-media-type {
+  width: 55px;
+}
+
+.table-icon {
+  width: 55px;
+}
+
+.display-resources td a {
+  word-break: break-word;
+}
+
+.menu-container {
+  position: relative;
+  top: -43px;
+  right: 12px;
+}
+
+.my-library-menu {
+  position: absolute;
+  background-color: #E5F2E2;
+  border-radius: .4em;
+  height: max-content;
+  width: 150px;
+  z-index: 1;
+  right: -1px;
+  top: 63px;
+  padding: 10px;
+}
+
+.my-library-menu::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 80%;
+  width: 0;
+  height: 0;
+  border: 20px solid transparent;
+  border-top: 0;
+  border-right: 0;
+  margin-left: -10px;
+  margin-top: -20px;
+  border-bottom-color: #E5F2E2;
+}
+
+.plus-minus-icon {
+  position: relative;
+}
+
+.plus-minus-icon:focus {
+  outline: none;
+}
+
+/* video box hover shadow */
+.vid {
+text-align:center;
+background: white;
+box-shadow: 0px 0px 0px grey;
+-webkit-transition: box-shadow .6s ease-out;
+box-shadow: .8px .9px 3px grey;
+}
+
+.vid:hover {
+box-shadow: 1px 8px 20px grey;
+-webkit-transition: box-shadow .6s ease-in;
+}
+
+/*Add Media Accordion*/
+.upload-instructions {
+  padding-top: 8px;
+}
+
+.accordion-content .tips-text {
+  margin-bottom: 0;
+}

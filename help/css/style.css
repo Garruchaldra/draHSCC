@@ -1,0 +1,72 @@
+#user-bar {
+position: relative;
+display: block;
+background: #ddd;
+text-align: center;
+padding: 0px 0px 10px 0px;
+}
+
+
+.user-link {
+display: inline-block;
+vertical-align: top;
+padding: 10px 20px;
+font-size: 22px;
+font-weight: bold;
+color: #999;
+text-decoration: none;
+}
+
+.user-link:hover {
+color: #666;
+}
+
+.active-user {
+background: #EEE8DA;
+border-radius: 0px 0px 10px 10px;
+color: #333;
+}
+
+#type-bar {
+position: relative;
+display: block;
+background: #ddd;
+text-align: center;
+padding: 10px 0px 0px 0px;
+}
+
+.type-link {
+display: inline-block;
+vertical-align: top;
+padding: 10px 20px;
+font-size: 14px;
+font-weight: bold;
+color: #999;
+text-decoration: none;
+}
+
+.type-link:hover {
+color: #666;
+}
+
+.active-type {
+background: #fff;
+border-radius: 10px 10px 0px 0px;
+color: #333;
+}
+
+.clickbar-content p img {
+width: 98%;
+height: auto;
+padding: 1%;
+background: #eee8da;
+}
+
+.clickbar-content p a {
+color: #aaa383;
+}
+
+.help-screenshots {
+  width: 82%;
+  max-width: 800px;
+}

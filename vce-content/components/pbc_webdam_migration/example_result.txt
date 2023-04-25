@@ -1,0 +1,419 @@
+stdClass Object
+(
+    [id] => 64271428
+    [type] => asset
+    [type_id] => 2
+    [status] => active
+    [filename] => You're Doing It_SUBS.mp4
+    [name] => You're Doing It_SUBS.mp4
+    [filesize] => 112.66
+    [actual_filesize] => 112.66 MB
+    [width] => 1920
+    [height] => 1080
+    [description] => In this 1-minute video, an educator works with a small group of children at a table. The teacher uses some narration and encourages effort.
+    [filetype] => mp4
+    [colorspace] => Bitmap
+    [version] => 1
+    [datecreated] => 2022-10-07 15:26:50
+    [date_created_unix] => 1665181610
+    [datemodified] => 2022-12-06 09:25:28
+    [date_modified_unix] => 1670347528
+    [datecapturedUnix] => 1665010453
+    [datecaptured] => 2022-10-05 15:54:13
+    [mediaUrl] => <div class="mediaplayerwrapper fullsize"><video class="video-js vjs-default-skin video-js-webdam" id="mediaspace" controls loop poster="https://cdn2.webdamdb.com/md_ojxkGON1sri2.jpg?1670347528"  preload="auto"><source type="video/mp4" src="https://cdn2.webdamdb.com/md_ojxkGON1sri2.mp4" /></video><script>videojs("mediaspace");</script></div>
+    [hiResMediaUrl] => <div class="mediaplayerwrapper fullsize"><video class="video-js vjs-default-skin video-js-webdam" id="mediaspace" controls loop poster="https://cdn2.webdamdb.com/md_ojxkGON1sri2.jpg?1670347528"  preload="auto"><source type="video/mp4" src="https://cdn2.webdamdb.com/md_ojxkGON1sri2.mp4" /></video><script>videojs("mediaspace");</script></div>
+    [hiResURLRaw] => https://cdn2.webdamdb.com/md_ojxkGON1sri2.mp4
+    [numComments] => 0
+    [pagecount] => 0
+    [hasthumbnail] => 0
+    [numExif] => 1
+    [numXmp] => 67
+    [modified_by] => stdClass Object
+        (
+            [type] => user
+            [id] => 1318828
+            [email] => ssilver1@uw.edu
+            [firstname] => Shelby
+            [lastname] => Silvernell
+            [name] => Shelby Silvernell
+            [username] => ssilver1
+            [status] => active
+            [role] => 1
+        )
+
+    [user] => stdClass Object
+        (
+            [type] => user
+            [id] => 1318828
+            [email] => ssilver1@uw.edu
+            [firstname] => Shelby
+            [lastname] => Silvernell
+            [name] => Shelby Silvernell
+            [username] => ssilver1
+            [status] => active
+            [role] => 1
+        )
+
+    [folder] => stdClass Object
+        (
+            [type] => folder
+            [id] => 1937835
+            [name] => Videos
+            [properties] => stdClass Object
+                (
+                    [ALBEMAILHIRESDOWNLOAD] => 
+                    [ALBENABLE_REQUESTDOWNLOAD] => 
+                    [ALBWATERMARKPHOTOS] => 0
+                    [ALBENABLE_DOWNLOADUSAGE] => 
+                    [ALBENABLE_REQUESTRECIPIENT] => 
+                )
+
+        )
+
+    [thumbnailurls] => Array
+        (
+            [0] => stdClass Object
+                (
+                    [size] => 100
+                    [url] => https://cdn2.webdamdb.com/100th_sm_ojxkGON1sri2.jpg?1670347528
+                )
+
+            [1] => stdClass Object
+                (
+                    [size] => 150
+                    [url] => https://cdn2.webdamdb.com/150th_sm_ojxkGON1sri2.jpg?1670347528
+                )
+
+            [2] => stdClass Object
+                (
+                    [size] => 220
+                    [url] => https://cdn2.webdamdb.com/220th_sm_ojxkGON1sri2.jpg?1670347528
+                )
+
+            [3] => stdClass Object
+                (
+                    [size] => 310
+                    [url] => https://cdn2.webdamdb.com/310th_sm_ojxkGON1sri2.jpg?1670347528
+                )
+
+            [4] => stdClass Object
+                (
+                    [size] => 550
+                    [url] => https://cdn2.webdamdb.com/md_ojxkGON1sri2.jpg?1670347528
+                    [previewurls] => Array
+                        (
+                            [0] => https://cdn2.webdamdb.com/md_ojxkGON1sri2_1.jpg?1670347528
+                            [1] => https://cdn2.webdamdb.com/md_ojxkGON1sri2_2.jpg?1670347528
+                            [2] => https://cdn2.webdamdb.com/md_ojxkGON1sri2_3.jpg?1670347528
+                            [3] => https://cdn2.webdamdb.com/md_ojxkGON1sri2_4.jpg?1670347528
+                        )
+
+                )
+
+        )
+
+    [videourls] => Array
+        (
+            [0] => stdClass Object
+                (
+                    [url] => https://cdn2.webdamdb.com/md_ojxkGON1sri2.mp4?1670347528
+                )
+
+        )
+
+    [watched] => 
+    [numRelated] => 0
+    [readonly] => 0
+    [readonlynext] => 0
+    [onhold] => 0
+    [metadata] => stdClass Object
+        (
+            [required] => stdClass Object
+                (
+                )
+
+        )
+
+)
+
+
+
+
+
+
+
+stdClass Object
+(
+    [type] => assetxmp
+    [byline] => 
+    [bytitle] => 
+    [caption] => In this 1-minute video, an educator works with a small group of children at a table. The teacher uses some narration and encourages effort.
+    [captionwriter] => 
+    [city] => Childcare Center
+    [contact] => Group of children, Educator
+    [copyright] => © Cultivate Learning at the University of Washington
+    [creatoradrext] => 
+    [creatoradrpcode] => 
+    [creatorcity] => 
+    [creatorcountry] => 
+    [creatoremailwrk] => 
+    [creatorregion] => 
+    [creatortelwrk] => 
+    [creatorurlwrk] => 
+    [credate] => 15-Feb-18
+    [credit] => 
+    [cretime] => 
+    [customfield1] => #WACCLIB, #OHSLIB
+    [customfield10] => 
+    [customfield11] => 5.0
+    [customfield12] => 
+    [customfield13] => 
+    [customfield14] => 
+    [customfield15] => Language Modeling and Conversation, Supporting Cognition
+    [customfield16] => 
+    [customfield17] => coded
+    [customfield18] => 
+    [customfield19] => EarlyEdU Course - Video Glossary
+    [customfield2] => 
+    [customfield20] => Free choice
+    [customfield3] => 
+    [customfield4] => 
+    [customfield5] => 
+    [customfield6] => 
+    [customfield7] => Physical development
+    [customfield8] => TRUE
+    [customfield9] => 
+    [datesent] => 12-Apr-18
+    [editstatus] => Materials to support learning
+    [fixture] => 
+    [headline] => 
+    [intelgenre] => 
+    [isocountrycode] => 
+    [keyword] => Content of Activity,Activities-materials,Art,Language development,Attending and understanding language,Physical development,Fine motor,Demographic,Age Group,Setting,Child Care Center,Space and Furnishings,Materials to support learning,Language Modeling and Conversation,Asking questions,Narration,Supporting Cognition,Expansion and clarification,Making learning meaningful,Supporting Social Emotional Development,Encouraging active participation,Early Childhood Teaching Practices,Preschool,Toddler,Childcare Center,Language,Language Spoken,English,Language Modeling and Communication,Materials,Environment,Center-based child care
+    [label] => 
+    [language] => English
+    [lens] => 
+    [marked] => 
+    [objectname] => 
+    [prgver] => 
+    [rating] => 
+    [reldate] => 
+    [reltime] => 
+    [rightsusageterms] => In copyright, non-profit & educational use permitted
+    [scene] => 
+    [source] => Toddler
+    [specinstr] => 
+    [state] => 
+    [subcategory] => English Subtitles
+    [subfile] => 
+    [subjectcode] => 
+    [sublocation] => 
+    [timesent] => 
+    [urgency] => 
+    [usageterms] => 
+    [webstatement] => 
+    [active_fields] => Array
+        (
+            [0] => stdClass Object
+                (
+                    [field] => customfield9
+                    [field_name] => Flag reason
+                    [value] => 
+                    [required] => 0
+                )
+
+            [1] => stdClass Object
+                (
+                    [field] => customfield8
+                    [field_name] => Waiver complete
+                    [value] => TRUE
+                    [required] => 0
+                )
+
+            [2] => stdClass Object
+                (
+                    [field] => customfield12
+                    [field_name] => Waiver version
+                    [value] => 
+                    [required] => 0
+                )
+
+            [3] => stdClass Object
+                (
+                    [field] => copyright
+                    [field_name] => Copyright Notice
+                    [value] => © Cultivate Learning at the University of Washington
+                    [required] => 0
+                )
+
+            [4] => stdClass Object
+                (
+                    [field] => rightsusageterms
+                    [field_name] => Rights Usage Terms
+                    [value] => In copyright, non-profit & educational use permitted
+                    [required] => 0
+                )
+
+            [5] => stdClass Object
+                (
+                    [field] => customfield3
+                    [field_name] => Produced by
+                    [value] => 
+                    [required] => 0
+                )
+
+            [6] => stdClass Object
+                (
+                    [field] => subcategory
+                    [field_name] => Subtitles
+                    [value] => English Subtitles
+                    [required] => 0
+                )
+
+            [7] => stdClass Object
+                (
+                    [field] => customfield19
+                    [field_name] => Product
+                    [value] => EarlyEdU Course - Video Glossary
+                    [required] => 0
+                )
+
+            [8] => stdClass Object
+                (
+                    [field] => fixture
+                    [field_name] => Source Asset Number(s)
+                    [value] => 
+                    [required] => 0
+                )
+
+            [9] => stdClass Object
+                (
+                    [field] => category
+                    [field_name] => Graphics
+                    [value] => 
+                    [required] => 0
+                )
+
+            [10] => stdClass Object
+                (
+                    [field] => keyword
+                    [field_name] => Keywords
+                    [value] => Content of Activity,Activities-materials,Art,Language development,Attending and understanding language,Physical development,Fine motor,Demographic,Age Group,Setting,Child Care Center,Space and Furnishings,Materials to support learning,Language Modeling and Conversation,Asking questions,Narration,Supporting Cognition,Expansion and clarification,Making learning meaningful,Supporting Social Emotional Development,Encouraging active participation,Early Childhood Teaching Practices,Preschool,Toddler,Childcare Center,Language,Language Spoken,English,Language Modeling and Communication,Materials,Environment,Center-based child care
+                    [required] => 0
+                )
+
+            [11] => stdClass Object
+                (
+                    [field] => customfield4
+                    [field_name] => Film date
+                    [value] => 
+                    [required] => 0
+                )
+
+            [12] => stdClass Object
+                (
+                    [field] => customfield5
+                    [field_name] => Program Name
+                    [value] => 
+                    [required] => 0
+                )
+
+            [13] => stdClass Object
+                (
+                    [field] => customfield6
+                    [field_name] => Educator
+                    [value] => 
+                    [required] => 0
+                )
+
+            [14] => stdClass Object
+                (
+                    [field] => subjectcode
+                    [field_name] => Professional Title
+                    [value] => 
+                    [required] => 0
+                )
+
+            [15] => stdClass Object
+                (
+                    [field] => customfield11
+                    [field_name] => Taxonomy version
+                    [value] => 5.0
+                    [required] => 0
+                )
+
+            [16] => stdClass Object
+                (
+                    [field] => customfield1
+                    [field_name] => Library Tag
+                    [value] => #WACCLIB, #OHSLIB
+                    [required] => 0
+                )
+
+            [17] => stdClass Object
+                (
+                    [field] => caption
+                    [field_name] => Description
+                    [value] => In this 1-minute video, an educator works with a small group of children at a table. The teacher uses some narration and encourages effort.
+                    [required] => 0
+                )
+
+            [18] => stdClass Object
+                (
+                    [field] => source
+                    [field_name] => Age Group
+                    [value] => Toddler
+                    [required] => 0
+                )
+
+            [19] => stdClass Object
+                (
+                    [field] => language
+                    [field_name] => Language Spoken
+                    [value] => English
+                    [required] => 0
+                )
+
+            [20] => stdClass Object
+                (
+                    [field] => city
+                    [field_name] => Setting
+                    [value] => Childcare Center
+                    [required] => 0
+                )
+
+            [21] => stdClass Object
+                (
+                    [field] => customfield14
+                    [field_name] => Special Collections
+                    [value] => 
+                    [required] => 0
+                )
+
+            [22] => stdClass Object
+                (
+                    [field] => customfield15
+                    [field_name] => Teaching Practices
+                    [value] => Language Modeling and Conversation, Supporting Cognition
+                    [required] => 0
+                )
+
+            [23] => stdClass Object
+                (
+                    [field] => customfield17
+                    [field_name] => Log status 
+                    [value] => coded
+                    [required] => 0
+                )
+
+            [24] => stdClass Object
+                (
+                    [field] => specinstr
+                    [field_name] => DTL Use
+                    [value] => 
+                    [required] => 0
+                )
+
+        )
+
+)

@@ -1,0 +1,393 @@
+ul.resource-library-taxonomy {
+position: relative;
+display: block;
+width: 100%;
+list-style-type: none;
+padding: 10px 0px;
+}
+
+ul.resource-library-taxonomy li {
+position: relative;
+display: block;
+border: 1px solid #333;
+border-radius: 5px;
+margin: 5px 0px;
+}
+
+.li-title {
+position: relative;
+display: block;
+width: 100%;
+line-height: 30px;
+text-align: center;
+background: #ccc;
+
+border-radius: 3px 3px 3px 3px;
+cursor: pointer;
+}
+
+.level-2-category {
+margin-left: 15px;
+}
+
+.level-3-category {
+margin-left: 30px;
+}
+
+.level-4-category {
+margin-left: 45px;
+}
+
+.level-5-category {
+margin-left: 60px;
+}
+
+.level-6-category {
+margin-left: 75px;
+}
+
+.li-contents {
+margin: 0px 10px;
+}
+
+.category-delete {
+position: absolute;
+top: 5px;
+right: 5px;
+padding: 0;
+margin: 0;
+border: 0;
+width: 20px;
+height: 20px;
+line-height: 20px;
+background: #fff;
+border-radius: 10px;
+cursor: pointer;
+}
+
+.sub-category-edit {
+position: absolute;
+top: 5px;
+left: 5px;
+padding: 0;
+margin: 0;
+border: 0;
+width: 20px;
+height: 20px;
+line-height: 20px;
+background: #fff;
+border-radius: 10px;
+cursor: pointer;
+}
+
+.sub-category-addition {
+position: absolute;
+top: 5px;
+left: 30px;
+padding: 0;
+margin: 0;
+border: 0;
+width: 20px;
+height: 20px;
+line-height: 18px;
+background: #fff;
+border-radius: 10px;
+cursor: pointer;
+}
+
+.add-sub-category {
+display: none;
+margin: 10px 0px 0px 0px;
+}
+
+.inline-submit {
+position: absolute;
+top: 13px;
+right: 0px;
+}
+
+.edit-category {
+display: none;
+}
+
+input.small-input {
+display: inline-block;
+height: 22px;
+min-height: 22px;
+font-size: 12px;
+width: calc(100% - 300px);
+border-radius: 0;
+padding: 0px 5px;
+margin: 0;
+}
+
+/* category listed */
+.resource-container {
+width: 100%;
+display: -ms-grid;
+display: grid;
+-ms-grid-columns: 25% 75%;
+grid-template-columns: 25% 75%;
+}
+
+.resource-library {
+-ms-grid-column: 1;
+grid-column-start: 1;
+border-width: 0px;
+border-style: solid;
+border-color: #d3d3d3;
+border-radius: 5px;
+background: #fff;
+position: relative;
+}
+
+/*Internet Explorer 9 mobile menu hack*/
+:root .resource-library {
+  overflow: hidden\9;
+}
+
+.resource-library-category-expanded {
+background: transparent;
+}
+
+.resource-library-category-expanded .level-title-expanded {
+background: #E5F2E2;
+}
+
+.resource-container .accordion-content{
+border: none;
+background: transparent;
+}
+
+.above-level-1 {
+min-height: 5px;
+border-radius: 5px 5px 0px 0px;
+text-align: left;
+font-size: 14px;
+font-weight: bold;
+padding-bottom: 15px;
+}
+
+.above-level-1 > .arrow {
+display: none;
+}
+
+.below-level-1 {
+height: 5px;
+border-radius: 0px 0px 5px 5px;
+}
+
+.level-title {
+font-size: 14px;
+cursor: pointer;
+margin-top: 10px;
+
+background: transparent;
+border: none;
+color: #333;
+text-align: left;
+display: inline-flex;
+}
+
+.arrow {
+position: absolute;
+right: 0;
+display: inline-block;
+}
+
+.arrow::after {
+font-size: 10px;
+margin-left: 6px;
+content: "\25BC";
+}
+
+.arrow-open::after {
+font-size: 10px;
+margin-left: 6px;
+content: "\25B2";
+}
+
+.resource-library-category > .resource-library-category {
+display: none;
+}
+
+.resource-results {
+height: 100%;
+-ms-grid-column: 2;
+grid-column-start: 2;
+margin-left: 20px;
+}
+
+.display-resources td a {
+word-break: normal;
+}
+
+.tablesorter .display-resources:hover {
+  background: transparent;
+}
+
+.tablesorter tbody > tr.hover > td,
+.tablesorter tbody > tr:hover > td,
+.tablesorter tbody > tr:hover + tr.tablesorter-childRow > td,
+.tablesorter tbody > tr:hover + tr.tablesorter-childRow + tr.tablesorter-childRow > td,
+.tablesorter tbody > tr.even.hover > td,
+.tablesorter tbody > tr.even:hover > td,
+.tablesorter tbody > tr.even:hover + tr.tablesorter-childRow > td,
+.tablesorter tbody > tr.even:hover + tr.tablesorter-childRow + tr.tablesorter-childRow > td {
+	background-color: transparent;
+}
+
+.file-type {
+  width: 65px;
+}
+
+.resource-results table.tablesorter thead tr th {
+background-color: #EBF5F6;
+}
+
+.resource-results table.tablesorter {
+border: .25px solid rgba(211, 211, 211, .5);
+}
+
+.resource-results table.tablesorter tbody td {
+  border-width: 1px 0px 0px 0px;
+}
+
+/*add to last viewed step menu*/
+.resource-results thead {
+  text-align: left;
+}
+
+.media_icon {
+  width: 42px;
+}
+
+.table-icon {
+  width: 55px;
+}
+
+.menu-container {
+  position: relative;
+  top: -43px;
+  right: 12px;
+}
+
+.my-library-menu {
+  position: absolute;
+  background-color: #E5F2E2;
+  border-radius: .4em;
+  height: max-content;
+  width: 150px;
+  z-index: 1;
+  right: -1px;
+  top: 63px;
+  padding: 10px;
+}
+
+.my-library-menu::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 80%;
+  width: 0;
+  height: 0;
+  border: 20px solid transparent;
+  border-top: 0;
+  border-right: 0;
+  margin-left: -10px;
+  margin-top: -20px;
+  border-bottom-color: #E5F2E2;
+}
+
+.plus-minus-icon {
+  position: relative;
+}
+
+.plus-minus-icon:focus {
+  outline: none;
+}
+
+
+/* Mobile Landscape Size to Tablet Portrait (devices and browsers) */
+@media only screen and (max-width: 767px) {
+
+.resource-container {
+display: inline-block;
+position: relative;
+overflow: hidden;
+}
+
+.resource-library {
+height: 20px;
+min-width: 170px;
+}
+
+.above-level-1 {
+display: -ms-grid;
+display: grid;
+-ms-grid-columns: auto 20px;
+grid-template-columns: auto 20px;
+cursor: pointer;
+width: 224px;
+}
+
+.above-level-1-expanded {
+border-bottom: 1px solid #333;
+padding-bottom: 4px;
+width: 100%;
+display: inline-flex;
+}
+
+.resource-results {
+padding: 0;
+margin: 0;
+margin-top: 15px;
+width: 100%;
+position: relative;
+}
+
+.resource-results-expanded {
+top: -246px;
+}
+
+.resource-library-expanded {
+background-color: white;
+overflow: visible;
+z-index: 10;
+height: 100%;
+position: relative;
+-webkit-box-shadow: 2px 6px 7px 1px rgba(0,0,0,.13);
+-moz-box-shadow: 2px 6px 7px 1px rgba(0,0,0,.13);
+box-shadow: 2px 6px 7px 1px rgba(0,0,0,.13);
+border: none;
+display: inline-block;
+min-width: 250px;
+}
+
+.above-level-1 > .arrow {
+display: inline;
+position: relative;
+}
+
+.arrow, .above-level-1-expanded > .arrow {
+position: absolute;
+right: 5px;
+display: inline-block;
+}
+
+}
+
+/*Internet Explorer specific styles*/
+@media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
+  .above-level-1 > .arrow {
+  right: 0px;
+  }
+
+  .arrow, .above-level-1-expanded > .arrow {
+  right: 5px;
+  }
+
+  .resource-library {
+    overflow: hidden;
+  }
+}

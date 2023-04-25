@@ -1,0 +1,11 @@
+<h2>AWS RESTFul endpoint</h2>
+<p>The AWS RESTFul endpoint allows programatic access to the AWS functions.  To make calls to the endpoint you must first request an ACCESS_TOKEN</p><br>
+<p>To make a call to get an ACCESS_TOKEN, use:<br><br>
+	<code>curl -i -v https://wa-coachingcompanion.org/endpoint/oauth2 -u '[email]:[password]' -d "grant_type=client_credentials"</code>
+</p><br>
+<p>To post information about a newly uploaded file and to kick off the transcoding (ACCESS_TOKEN is what the call above gives you):<br><br>
+	<code>curl -d '{"path":"1234.mp4","parent_id":"27","name":"blocks.mp4","user_id":"2","title":"new vid","access_token":"[ACCESS_TOKEN]"}' https://wa-coachingcompanion.org/endpoint/aws_media/</code>
+</p><br>
+<p>To get acount information about a user:<br><br>
+	<code>curl -d '{"email":"[email]","password":"[password]","access_token":"[ACCESS_TOKEN]"}' https://wa-coachingcompanion.org/endpoint/login/</code>
+</p>

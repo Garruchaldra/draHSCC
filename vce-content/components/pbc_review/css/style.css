@@ -1,0 +1,54 @@
+/* tabs */
+
+.pbc_review-tabs {
+display: block;
+height: 50px;
+padding: 0px 5px;
+margin: 10px 0px;
+border-width: 0px 0px 1px 0px;
+border-style: solid;
+border-color: #333;
+}
+
+.tab {
+display: inline-block;
+text-decoration: none;
+line-height: 49px;
+vertical-align: top;
+color: #666;
+background: #efefef;
+border-width: 1px 1px 0px 1px;
+border-style: solid;
+border-color: #ddd;
+border-radius: 5px 5px 0px 0px;
+padding: 0px 20px;
+margin: 0px 2px;
+}
+
+.tab:hover {
+background: #ddd;
+}
+
+
+.active-tab {
+color: #333;
+background: #fff;
+font-weight: bold;
+line-height: 50px;
+border-width: 1px 1px 0px 1px;
+border-style: solid;
+border-color: #333;
+border-radius: 5px 5px 0px 0px;
+}
+
+.active-tab:hover {
+background: #fff;
+}
+
+.tab-content {
+display: none;
+}
+
+.active-tab-content {
+display: block;
+}

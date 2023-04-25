@@ -1,0 +1,169 @@
+* {
+font-family: sans-serif;
+font-weight: 400;
+font-size: 15px;
+color: #333;
+-webkit-tap-highlight-color: rgba(0,0,0,0);
+}
+
+html, body {
+height: 100%;
+margin: 0;
+padding: 0;
+-webkit-text-size-adjust: 100%;
+-moz-text-size-adjust: 100%;
+-ms-text-size-adjust: 100%;
+}
+
+#wrapper {
+position: relative;
+display: block;
+width: 100%;
+min-height: 100%;
+margin: 0;
+padding: 0;
+background: #fff;
+}
+
+.full-width-line {
+position: relative;
+display: block;
+width: 100%;
+height: 1px;
+background: #333;
+}
+
+/* header */
+
+#header {
+position: relative;
+display: block;
+max-width: 960px;
+margin: 0 auto;
+}
+
+#top-header {
+display: block;
+width:100%;
+height: 40px;
+border-width: 0px 0px 1px 0px;
+border-style: solid;
+border-color: #d3d3d3;
+text-align: center;
+}
+
+
+#content {
+position: relative;
+display: block;
+max-width: 940px;
+margin: 0 auto;
+padding: 10px 10px 120px 10px;
+clear: both;
+}
+
+.clear-all {
+clear: both;
+}
+
+/* breadcrumbs */
+
+#breadcrumbs {
+font-face: sans-serif;
+display: block;
+font-size: 9px;
+letter-spacing: 1px;
+margin: 0px 0px 5px 0px;
+}
+
+
+.breadcrumb-item {
+margin: 0px 6px 0px 0px;
+font-face: sans-serif;
+color: #666;
+font-size: 9px;
+text-decoration: none;
+letter-spacing: 1px;
+}
+
+.breadcrumb-item:hover {
+text-decoration: underline;
+}
+
+.breadcrumb-item-home:before {
+content: "\2302";
+margin-left: 6px;
+}
+
+.breadcrumb-item:after {
+content: "\00BB";
+margin-left: 6px;
+}
+
+.breadcrumb-item:last-child:after {
+content: "";
+margin-left: 0px;
+}
+
+
+/* ADD / EDIT buttons */
+
+.add-toggle {
+background-image: url('../images/add.png');
+}
+
+.edit-toggle {
+background-image: url('../images/edit.png');
+}
+
+.add-toggle:hover, .add-toggle.admin-toggle-active {
+background-image: url('../images/add-white.png');
+}
+
+.edit-toggle:hover, .edit-toggle.admin-toggle-active {
+background-image: url('../images/edit-white.png');
+}
+
+.add-toggle, .edit-toggle, .add-toggle.admin-toggle-active, .edit-toggle.admin-toggle-active, .add-toggle:hover, .edit-toggle:hover {
+background-size: 22px 22px;
+background-repeat: no-repeat;
+background-position: 0px 0px;
+padding-left: 22px;
+}
+
+.admin-toggle {
+display: inline-block;
+visibility: hidden;
+cursor: pointer;
+
+}
+
+.admin-toggle-active {
+background: #333;
+color: #fff;
+}
+
+.close-message {
+position: absolute;
+top:0px;
+right: 0px;
+width: 20px;
+height: 20px;
+border-radius: 10px;
+background: #fff;
+color: #333;
+margin: 10px;
+cursor: pointer;
+}
+
+/* footer */
+
+#footer {
+position: absolute;
+display: block;
+width: 100%;
+height: 100px;
+bottom: 0px;
+left: 0px;
+background: #d3d3d3;
+}
