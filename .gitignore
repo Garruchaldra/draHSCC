@@ -1,0 +1,8 @@
+.DS_Store
+log.txt
+vce-content/uploads/
+debug.txt
+plog.txt
+vce-config.php
+.htaccess
+.git
