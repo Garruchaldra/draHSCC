@@ -130,6 +130,8 @@ $(document).ready(function() {
 		});
 
 
+
+
 					//add resource from resource library
 	//first, call method to add resource_caller to page, then redirect to the resource library
 	$('.add-requester').click(function()  {

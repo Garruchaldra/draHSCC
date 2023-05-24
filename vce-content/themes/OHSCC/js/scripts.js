@@ -1,6 +1,13 @@
 $(document).ready(function() {
 	// MOBILE MENU
 	// make mobile menu not keyboard accessible when menu is closed
+
+	// var envelope_icon = '<span><svg class="svg-snoweb svg-theme-light" height="100" preserveaspectratio="xMidYMid meet" viewbox="0 0 100 100" width="100" x="0" xmlns="http://www.w3.org/2000/svg" y="0"> <path class="svg-stroke-primary" d="M12.2,33.2,45.3,55.3a8.5,8.5,0,0,0,9.4,0L87.8,33.2M20.6,79.4H79.4A8.3,8.3,0,0,0,87.8,71V29a8.3,8.3,0,0,0-8.4-8.4H20.6A8.3,8.3,0,0,0,12.2,29V71A8.3,8.3,0,0,0,20.6,79.4Z" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="8"> </path> </svg></span>';
+	var envelope_icon = $('#envelope-icon-span').html();
+
+	$('.menu-side_menu .menu-item-first').prepend(envelope_icon);
+
+
 	$('.responsive-menu').find('*').attr('tabindex', -1);
 
 	var positionLeft = -1;

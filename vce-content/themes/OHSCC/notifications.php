@@ -16,6 +16,7 @@ $vce->site->add_style($vce->site->theme_path . '/css/notifications_style.css', '
 $user_data = NULL;
 if (class_exists('Pbc_utilities')) { 
   $user_data = Pbc_utilities::get_user_data($vce->user->user_id);
+  $new_notification_count = Pbc_utilities::get_new_notification_count($vce->user->user_id);
 }
 
 ?>
@@ -39,12 +40,12 @@ if (class_exists('Pbc_utilities')) {
         <div id="header-bg">
           <div id="decorative-bar">
             <a href="https://eclkc.ohs.acf.hhs.gov/" target="_blank">
-            <img id="eclkc-logo" src="<?php echo $site->theme_path; ?>/images/Early_Childhood Development_Teaching_and_Learning.png" alt="Head Start Early Childhood Learning & Knowledge Center" />
+            <img id="eclkc-logo" src="<?php echo $site->theme_path; ?>/images/Early_Childhood Development_Teaching_and_Learning02.png" alt="Head Start Early Childhood Learning & Knowledge Center" />
             </a>
           </div>
           <div class="inner">
             <div id="welcome-bar">
-              <?php if (isset($user->user_id)) { ?>
+            <?php if (isset($user->user_id)) { ?>
                 <div class="side-menu_container">
                   <p class="welcome-text">Welcome, <?php echo $user->first_name; ?> <?php echo $user->last_name; ?></p>
                   <p>Org: <?php echo $user_data->organization_name; ?></p>
@@ -52,6 +53,11 @@ if (class_exists('Pbc_utilities')) {
                   <div><?php $content->menu('side_menu'); ?></div>
                   <?php
                   // echo $content->notifications(null, true, true); 
+                  // this shows the new notifications which will be listed in My Account
+                  $new_notification_count = (!isset($new_notification_count) || $new_notification_count == 0) ? '' : $new_notification_count;
+                  // this content is hidden, but prepended to side_menu on page load
+                  $icon_content = '<span id="envelope-icon-span" style="display:none"><img id="envelope-icon" style="height:20px; width:20px; top:5px; position:relative;" src="' . $site->theme_path . '/images/envelope_icon.png" alt="messages" /><span style="color:red;">' . $new_notification_count . '</span>&nbsp;</span>';
+                  echo  $icon_content;
                   ?>
                 </div>
               <?php } ?>
@@ -104,10 +110,14 @@ if (class_exists('Pbc_utilities')) {
 
 
 
-          <div class="pbc-item-header notifications"><h1>Notifications</h1></div>
-			<?php echo $vce->content->notifications(null, true, true); ?>
+          <div class="pbc-item-header notifications"><h1>Notifications</h1><h2>(Notifications in green are unread.)</h2>
+          </div>
+          <div class="divTable">
+            <?php 
+              echo $vce->content->notifications(null, true, true); 
+            ?>
 
-		
+      </div>
 		</div>
 	</div>       
 	   

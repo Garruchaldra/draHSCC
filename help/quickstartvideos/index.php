@@ -79,7 +79,7 @@ li {
 height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <!-- End Google Tag Manager (noscript) -->
 <div class="wrapper">
-	<div><a class="progress-info-box__link" href="/ohscc"><div class="back-icon"></div>Return to Coaching Companion</a></div>
+	<div><a class="progress-info-box__link" href="/cc"><div class="back-icon"></div>Return to Coaching Companion</a></div>
 
 	<h1 class="main-title" >Coaching Companion: Quickstart Video Tutorials</h1>
 	<div>

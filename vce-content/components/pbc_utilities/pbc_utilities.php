@@ -140,6 +140,12 @@ class Pbc_utilities  extends Component {
 		return $insert;
 	}
 
+	public static function get_new_notification_count($input) {
+		require(dirname(__FILE__).'/includes/get_new_notification_count.php');
+		return $new_notification_count;
+	}
+
+
 
 
 	/**

@@ -446,10 +446,39 @@ EOF;
 
 		// check if external link already exists in resource library
 		$import_url = $input['import_url'];
-		$query = "SELECT a.component_id FROM " . TABLE_PREFIX . "components_meta AS a JOIN " . TABLE_PREFIX . "components_meta AS b ON a.component_id=b.component_id AND b.meta_key = 'resource_library_component_id' AND b.meta_value=$resource_library_component_id AND a.meta_value = '$import_url'";
+		$query = "SELECT a.component_id, c.meta_value AS taxonomy, c.id AS taxonomy_id FROM " . TABLE_PREFIX . "components_meta AS a JOIN " . TABLE_PREFIX . "components_meta AS b ON a.component_id=b.component_id AND b.meta_key = 'resource_library_component_id' AND b.meta_value=$resource_library_component_id AND a.meta_value = '$import_url' JOIN " . TABLE_PREFIX . "components_meta AS c ON a.component_id=c.component_id AND c.meta_key='taxonomy'";
 		// $vce->log($query);
 		$result = $vce->db->get_data_object($query);
+
+		// if the resource exists, it may have new taxonomy to add, so we'll check and correct if necessary
 		if ($result) {
+			// format $taxonomy correctly; it needs opening and ending pipelines
+			$taxonomy = (isset($input['taxonomy'])) ? $input['taxonomy'] : '';
+			$taxonomy = '|' . trim($taxonomy, '|') . '|';
+			if ($taxonomy == '||') {
+				$taxonomy = '';
+			}
+
+			if (isset($result->taxonomy) && $taxonomy && $result->taxonomy != $taxonomy) {
+				$result_taxonomy = $result->taxonomy;
+				$previous_taxonomy = explode('|', trim($result_taxonomy, '|'));
+				$taxonomy = explode('|', trim($taxonomy, '|'));
+				$complete_taxonomy = array_merge($previous_taxonomy, $taxonomy);
+				$complete_taxonomy = '|' . implode('|', $complete_taxonomy) . '|';
+
+				$taxonomy_id = $result->taxonomy_id;
+				$query = "UPDATE " . TABLE_PREFIX . "components_meta SET meta_value='$complete_taxonomy' WHERE id='$taxonomy_id'";
+				$vce->db->query($query);
+
+				$message = 'Added new taxonomy to : ' . $import_url;
+				echo json_encode(array('response' => 'success','message' => $message,'action' => ''));
+				return;
+
+
+			}
+
+
+
 			$message = 'External link exists in glossary : ' . $import_url;
 			echo json_encode(array('response' => 'error','message' => $message,'action' => ''));
 			return;

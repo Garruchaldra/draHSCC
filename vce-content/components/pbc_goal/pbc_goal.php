@@ -424,7 +424,11 @@ EOF;
 		$value = $vce->site->$component_name;
 		$minutia = $component_name . '_minutia';
 		$vector = $vce->site->$minutia;
-		$component_config = json_decode($vce->site->decryption($value, $vector), true);
+		if (!empty($value) && !empty($vector)) {
+			$component_config = json_decode($vce->site->decryption($value, $vector), true);
+		} else {
+			$component_config = NULL;
+		}
 
 		// get info about parent cycle
 		$cycle_title = $parent_cycle_attributes->pbccycle_name;

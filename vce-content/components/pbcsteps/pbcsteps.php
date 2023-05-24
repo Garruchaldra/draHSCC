@@ -10,7 +10,9 @@ class Pbcsteps extends Component {
 		return array(
 			'name' => 'PBC Cycle Steps',
 			'description' => 'A container for steps within PBC Cycles',
-			'category' => 'pbc'
+			'category' => 'pbc',
+			'recipe_fields' => array('title','template','role_access','content_access','content_create','content_edit','content_delete')
+
 		);
 	}
 
@@ -602,7 +604,11 @@ EOF;
 
 				//find out if the logged in user should see the edit button
 				// (In this case, the user must either be a participant of the step or the creator)
-				$can_edit = (in_array($vce->user->user_id, explode('|', trim($each_pbcstep1->aps_assignee, '|'))) ? true : false);
+				// $vce->dump($each_component);
+			// $vce->dump($each_component->can_edit($vce));
+			//use this $can_edit if it is decided that everyone can edit (following the permissions set in pbccycles)
+				$can_edit = $vce->page->can_edit($each_component);
+				// $can_edit = (in_array($vce->user->user_id, explode('|', trim($each_pbcstep1->aps_assignee, '|'))) ? true : false);
 				$edit_button = '';
 
 				// show edit button if user is creator, has permissions, and it is not checked as complete
@@ -955,6 +961,7 @@ EOF;
 					$reload = TRUE;
 				}
 
+				$tab1_label = (isset($tab1_label)) ? $tab1_label : NULL;
 				$tab1_id = (isset($tab1_id)) ? $tab1_id : NULL;
 				$tab1_id = (isset($tab1_label)) ? $tab1_label : NULL;
 				$tabs_input['tabs__container1']['tabs']['tab1'] = array(

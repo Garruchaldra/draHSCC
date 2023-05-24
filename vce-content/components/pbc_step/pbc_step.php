@@ -11,7 +11,8 @@ class Pbc_step extends Component {
 			'name' => 'Action Plan Step',
 			'description' => 'Step to achieve the Action Plan Step',
 			'category' => 'pbc',
-			'recipe_fields' => array('title','description','potence')
+			'recipe_fields' => array('title','description','potence','role_access','content_access','content_create','content_edit','content_delete')
+
 		);
 	}
 
@@ -90,7 +91,7 @@ EOF;
 // return false;
 // $vce->dump($each_component);
 
-		$can_edit = (in_array($vce->user->user_id, explode('|', trim($each_component->aps_assignee, '|'))) ? true : false);
+		$can_edit = (in_array($vce->user->user_id, explode('|', trim($each_component->aps_assignee, '|')))) ? true : false;
 		// $vce->dump($can_edit);
 		if ($can_edit || $each_component->created_by == $vce->user->user_id) {
 			//get cycle id
@@ -242,12 +243,13 @@ EOF;
 				'created_at' => $each_component->created_at,
 				'parent_url' => $vce->pbccycle_url
 				);
-// $vce->dump($vce);
+
 				// generate dossier
 				$dossier_for_delete = $vce->generate_dossier($dossier);
-	$can_edit = (in_array($vce->user->user_id, explode('|', trim($each_component->aps_assignee, '|'))) ? true : false);
+	$can_edit = (in_array($vce->user->user_id, explode('|', trim($each_component->aps_assignee, '|'))) || $vce->user->user_id == $each_component->created_by) ? true : false;
 	// $can_edit = ($each_component->created_by == $vce->user->user_id ? true : false);
 	if ($can_edit) {	
+		// $vce->dump($vce->user->user_id);
 		$edit_tab_content .= <<<EOF
 		<form id="delete_$each_component->component_id" class="delete-form float-right-form asynchronous-form" method="post" action="$vce->input_path">
 		<input type="hidden" name="dossier" value="$dossier_for_delete">
@@ -381,7 +383,11 @@ EOF;
 		$minutia = $component_name . '_minutia';
 		$vector = $vce->site->$minutia;
 
-		$component_config = json_decode($vce->site->decryption($value, $vector), true);
+		if (!empty($value) && !empty($vector)) {
+			$component_config = json_decode($vce->site->decryption($value, $vector), true);
+		} else {
+			$component_config = NULL;
+		}
 
 		// get info about parent cycle
 		$cycle_title = $parent_cycle_attributes->pbccycle_name;

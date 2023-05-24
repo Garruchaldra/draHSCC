@@ -8,7 +8,8 @@ class Pbc_UserMedia_organization extends Component {
 		return array(
 			'name' => 'PBC User Media Organization',
 			'description' => 'Allows an organization to manage their media',
-			'category' => 'pbc'
+			'category' => 'pbc',
+			'recipe_fields' => array('title','template','role_access','content_access','content_create','content_edit','content_delete')
 		);
 	}
 	
@@ -66,22 +67,18 @@ class Pbc_UserMedia_organization extends Component {
 	 *
 	 */
 	public function as_content($each_component, $vce) {
-// $vce->dump($vce->user);
 		// this is to avoid having add buttons on the resources 
 		if (isset($vce->redirect_url) && isset($vce->as_resource_requester_id) && $vce->as_resource_requester_id == $each_component->component_id) {
 			$vce->site->remove_attributes('redirect_url');
 			unset($vce->redirect_url);
 		}
 		if (isset($vce->as_resource_requester_id) && $vce->as_resource_requester_id == $each_component->component_id) {
-			// $vce->dump($vce->as_resource_requester_id);
 			$vce->site->remove_attributes('as_resource_requester_id');
 			unset($vce->as_resource_requester_id);
 		}
 
 		
 
-		// $vce->dump($each_component);
-		// $vce->plog($vce->user);
 		$usermedia_each_component = $each_component;
 		$content = NULL;
 		
@@ -104,21 +101,18 @@ class Pbc_UserMedia_organization extends Component {
 
 		// Call utility for adding "org_id" to media children of this library
 		if (isset($vce->query_string->utility_to_run) && $vce->query_string->utility_to_run == 'utility_add_org_ids') {
-			// $vce->dump($vce->query_string);
 			self::utility_add_org_ids($vce);
 			return;
 		}
 
 		// Call utility for adding "org_id" to media children of this library
 		if (isset($vce->query_string->utility_to_run) && $vce->query_string->utility_to_run == 'correct_alias_type') {
-			// $vce->dump($vce->query_string);
 			self::correct_alias_type($vce);
 			return;
 		}
 
 		// View an individual resource
 		if (isset($vce->query_string->resource_id)) {
-			// $vce->dump($vce->query_string);
 			self::view_resource($each_component, $vce);
 			return;
 		}
@@ -360,7 +354,6 @@ EOF;
 			$query = "SELECT a.component_id AS component_id, e.meta_value AS title FROM " . TABLE_PREFIX . "components AS a JOIN " . TABLE_PREFIX . "components_meta AS b ON a.parent_id = b.component_id AND b.meta_key='type' AND b.meta_value='Pbc_UserMedia_organization' JOIN " . TABLE_PREFIX . "components_meta AS c ON a.component_id = c.component_id AND c.meta_key='type' AND (c.meta_value='Media' OR c.meta_value='Alias')  JOIN " . TABLE_PREFIX . "components_meta AS d ON a.component_id = d.component_id AND d.meta_key='org_id' AND d.meta_value=" . $vce->user->organization . " JOIN " . TABLE_PREFIX . "components_meta AS e ON a.component_id = e.component_id AND e.meta_key='title' ORDER BY $sort_by " .  $sort_direction . " LIMIT " . $pagination_length . " OFFSET " . $pagination_offset;;
 			$media_component_ids = $vce->db->get_data_object($query);
 
-			// $vce->dump($query);
 			
 			
 			// strategy to take query out of foreach loop
@@ -375,7 +368,6 @@ EOF;
 			
 			// get alias components meta data using a list of component ids from last query
 			$query = "SELECT component_id, meta_key, meta_value, minutia FROM " . TABLE_PREFIX . "components_meta WHERE component_id IN (" . $component_ids_commadelineated . ") ORDER BY meta_key";
-// $vce->dump($query);
 			// $query = "SELECT component_id, meta_key, meta_value, minutia FROM " . TABLE_PREFIX . "components_meta WHERE component_id IN (3234,1,4) ORDER BY meta_key";
 			$components_meta = $vce->db->get_data_object($query);
 		
@@ -399,20 +391,16 @@ EOF;
 
 			$new_component = (isset($new_component)) ? $new_component : array();
 			$original_each_component = $each_component;
-			// $vce->dump($new_component);
 			// create array of component objects
 			foreach ($new_component as $key=>$value) {
 				$each_component = new stdClass();
 				$each_component->component_id = $key;
-				// $vce->dump($new_component[$key]);
 				foreach ($new_component[$key] as $key2=>$value2) {
 					if ($key2 == 'title') {
 						if (trim($value2) == 'Alias') {
 							$query = "SELECT component_id, meta_key, meta_value, minutia FROM " . TABLE_PREFIX . "components_meta WHERE component_id = " . $value['alias_id'] . " AND meta_key = 'title'";
-							// $vce->dump($query);
 							$components_meta = $vce->db->get_data_object($query);
 							if (empty($components_meta)) {
-								// $vce->dump('yep');
 								continue 2;
 							}
 							if (!empty($components_meta[0]->meta_value)) {
@@ -438,16 +426,12 @@ EOF;
 			// 	$this_media .= "
 			// 	 $k";
 			// }
-			// $vce->dump($this_media);
-
-			// $vce->dump($user_media);
 
 			// user information
 			$user_data = NULL;
 			if (class_exists('Pbc_utilities')) { 
 				$user_data = Pbc_utilities::get_user_data($vce->user->user_id);
 			}
-			// $vce->dump($user_data);
 
 			// load hooks
 			if (isset($vce->site->hooks['titleBar'])) {
@@ -498,7 +482,6 @@ EOF;
 		'redirect_url' => $usermedia_each_component->parent->url,
 		'component_title' => $usermedia_each_component->title
 		);
-// $vce->dump($dossier);
 		// add dossier for requesting a resource
 		$dossier_for_add_resource_requester_id = $vce->generate_dossier($dossier);
 				
@@ -550,17 +533,13 @@ $add_to_step_heading
 </tr>
 </thead>
 EOF;
-		// $vce->dump($user_media);
 		$component_id_list = array();
 
-// $vce->dump($each_component);
 
 		foreach($user_media as $each_media_item) {
-			// $vce->dump($each_media_item);
 
 			// list each resource or alias only once
 	// if (in_array($each_media_item->component_id, $component_id_list) || in_array($each_media_item->alias_id, $component_id_list)) {
-	// 	// $vce->dump($each_media_item->component_id);
 	// 	continue;
 	// }
 			
@@ -568,13 +547,9 @@ EOF;
 				
 				$component_id_list[] = $each_media_item->alias_id;
 				$target_component = $vce->page->get_requested_component($each_media_item->alias_id);
-				// $vce->dump($target_component);
 
 				$vce->site->add_attributes('alias_of_' . $target_component->component_id, $each_media_item, TRUE);
 
-				// $vce->dump($each_media_item);
-// $vce->dump($target_component->component_id);
-// $vce->dump($vce->{$target_component->component_id});
 				$this_title = (isset($each_media_item->title) && trim($each_media_item->title) != 'Alias') ? $each_media_item->title : $target_component->title;
 				$each_media_item->component_id = $target_component->component_id;
 				$each_media_item->title = $this_title . ' &nbsp;&nbsp;(copy of: ' . $target_component->title . ')';
@@ -627,8 +602,6 @@ EOF;
 			);
 			// generate dossier
 			$dossier_copy_resource = $vce->generate_dossier($dossier);
-// $vce->dump($vce->as_resource_requester_id);
-// $vce->dump($vce->redirect_url);
 			$content .= <<<EOF
 			<td class="table-icon">
 			<form class="asynchronous-form" method="post" action="$vce->input_path">
@@ -676,11 +649,9 @@ EOF;
 	 * show an individual resource
 	 */
 	private function view_resource($each_component, $vce) {
-// $vce->dump($vce->query_string->resource_id);
 		$vce->site->add_script(dirname(__FILE__) . '/js/script.js', 'jquery-ui select2');
 		$vce->site->add_style(dirname(__FILE__) . '/css/style.css','resource-library-style');
 
-	// $vce->dump($vce->as_resource_requester_id);
 		// check that resource id is a number. If it is not, then return
 		if (preg_match('/^\d+$/', $vce->query_string->resource_id, $matches) !== 1) {
 			$vce->content->add('main','<div class="form-message form-error">Not a valid resource id</div>');
@@ -726,10 +697,6 @@ EOF;
 			}
 
 	}
-// 	$vce->dump($component);
-// 	$vce->dump($component['component_id']);
-// $vce->dump($vce->{$component['component_id']});
-// $vce->dump($vce->{'alias_of_' . $component['component_id']});
 	$show_resource = FALSE;
 	if (isset($vce->{'alias_of_' . $component['component_id']})) {
 		$original_alias = $vce->{'alias_of_' . $component['component_id']};
@@ -737,8 +704,6 @@ EOF;
 	}
 
 	$created_by = $vce->user->get_users($component['created_by']);
-	// $vce->dump($created_by[0]->organization);
-	// $vce->dump($vce->user->organization);
 	if ($vce->user->organization == $created_by[0]->organization) {
 		$show_resource = TRUE;
 	}
@@ -755,9 +720,9 @@ EOF;
 
 		$content = "";
 
-		$component_title_to_update = $resource->title;
-		if (isset($original_alias['title'])) {
-			$component_title_to_update = $original_alias['title'];
+		$title = $resource->title;
+		if (isset($original_alias['title']) && trim(strtolower($original_alias['title'])) != 'alias') {
+			$title = $original_alias['title'];
 		}
 		
 		$back = $vce->site->site_url . '/' . $vce->requested_url;
@@ -768,7 +733,7 @@ EOF;
 			'type' => 'text',
 			'name' => 'title',
 			'required' => 'true',
-			'value' => $component_title_to_update,
+			'value' => $title,
 			'data' => array(
 				'autocapitalize' => 'none',
 				'tag' => 'required',
@@ -777,26 +742,21 @@ EOF;
 
 		$resource_title_input = $vce->content->create_input($input,'Resource Title');
 
-		$description = nl2br($resource->description);
+		$description = (isset($original_alias['description']))? $original_alias['description'] : $resource->description;
 
-		$component_description_to_update = $resource->description;
-		if (isset($original_alias['description'])) {
-			$component_description_to_update = $original_alias['description'];
-		}
+		$description = nl2br($description);
 
 		$input = array(
 			'type' => 'text',
 			'name' => 'description',
-			'value' => $component_description_to_update,
+			'value' => $description,
 			'data' => array(
 				'autocapitalize' => 'none',
 			)
 		);
-// $vce->dump($original_alias);
-// $vce->dump($resource);
 		$resource_description_input = $vce->content->create_input($input,'Resource Description');
 
-		$component_id_to_update = $resource->component_id;
+
 		if (isset($original_alias['component_id'])) {
 			$component_id_to_update = $original_alias['component_id'];
 		}
@@ -826,7 +786,6 @@ EOF;
 		if (isset($original_alias['created_at'])) {
 			$created_at = $original_alias['created_at'];
 		}
-// $vce->dump($component_id_to_delete);
 		// dossier for delete
 		$dossier = array(
 			'type' => 'Pbc_UserMedia',
@@ -848,10 +807,10 @@ EOF;
 		$resource_title_input
 		$resource_description_input
 EOF;
-// $vce->dump($vce->query_string->mode);
-// $vce->dump($component['created_by']);
+
 			// show edit and delete buttons only if this user also created the resource
-		if ($vce->query_string->mode == 'edit' && $vce->user->user_id == $created_by) {
+
+		if ($vce->query_string->mode == 'edit' && $vce->user->role_name == 'OrganizationAdmin') {
 
 			// if (!isset($original_alias['component_id'])) {
 				$content .= <<<EOF
@@ -945,7 +904,6 @@ EOF;
 		$query = "UPDATE " . TABLE_PREFIX . "components_meta SET meta_value = 'Alias' WHERE meta_key='title' AND meta_value=' Alias'";
 		$corrected_components = $vce->db->query($query);
 
-		$vce->dump($corrected_components);
 
 		return TRUE;
 	}
@@ -964,7 +922,6 @@ EOF;
 				$this_user = $vce->user->get_users($each_media_component->meta_value);			
 				$query = "INSERT INTO  " . TABLE_PREFIX . "components_meta  (component_id, meta_key, meta_value, minutia) VALUES ('" . $each_media_component->component_id . "', 'org_id', '" .$this_user[0]->organization . "', '')";
 				$result = $vce->db->query($query);
-				// $vce->dump($query);
 			}
 		}
 	}

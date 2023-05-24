@@ -589,7 +589,7 @@ class Pbccycles extends Component {
 		$cycle_link_info = $pbc_home_location->generate_cycle_info($each_component, $vce);
 		$vce->content->add('cycle_link_info', $cycle_link_info);
 	
-	
+		// $vce->dump($each_component->can_edit($vce));
 		$can_edit = $vce->page->can_edit($each_component);
 // $can_edit = true;
 		if ($can_edit) {
@@ -703,7 +703,7 @@ EOF;
 			'tag' => 'required',
 		)
 		);
-	
+	// $vce->dump($each_component);
 		$input = pbc_utilities::datalist_add_multiple_select($dd_array, $vce);
 		$multiple_member_input = $vce->content->create_input($input,'Cycle Participants');
 
@@ -917,7 +917,11 @@ EOF;
 
 		
 		// is the parent of this event correct?
-		if ($parents[count($parents) - 2]->type != 'Pbc_home_location') {
+		if (!isset($parents)) {
+			return false;
+		}
+
+		if (isset($parents) && $parents[count($parents) - 2]->type != 'Pbc_home_location') {
 			return false;
 		}
 		
